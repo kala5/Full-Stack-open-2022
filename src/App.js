@@ -4,21 +4,23 @@ const Header = (course) => {
   )
 }
 
-const Content = (lista) => {
+const Part = (tiedot) => {
   return(
-  <>
     <p>
-    {lista.lista[0].name} {lista.lista[0].exercises}
-  </p>
-  <p>
-    {lista.lista[1].name} {lista.lista[1].exercises}
-  </p>
-  <p>
-    {lista.lista[2].name} {lista.lista[2].exercises}
-  </p>
-  </>
-
+      {tiedot.tiedot.name} {tiedot.tiedot.exercises}
+    </p>
   )
+}
+
+const Content = (lista) => {
+    return (
+      <div>
+        <Part tiedot={lista.lista[0]}/>
+        <Part tiedot={lista.lista[1]}/>
+        <Part tiedot={lista.lista[2]}/>
+      </div>
+    )
+  
 }
 
 const Total = (lista) => {
